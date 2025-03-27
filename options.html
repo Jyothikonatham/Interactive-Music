@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options - Music Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Music Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="instrument.html">Instruments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="payment-options">
+            <h2>Choose Your Payment Method</h2>
+            <p>Please select one of the following payment methods to complete your registration:</p>
+
+            <!-- Payment Options -->
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <h3>PayPal</h3>
+                    <p>Securely pay via PayPal using your PayPal account or credit/debit card.</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+
+                <div class="payment-method">
+                    <h3>Credit/Debit Card</h3>
+                    <p>Pay securely with your credit or debit card via our payment gateway.</p>
+                    <button type="button" onclick="window.location.href='credit-card-payment.html'">Pay with Card</button>
+                </div>
+
+                <div class="payment-method">
+                    <h3>Bank Transfer</h3>
+                    <p>Choose bank transfer for direct payment. Details will be sent to your email.</p>
+                    <button type="button" onclick="window.location.href='bank-transfer.html'">Bank Transfer</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Music Learning Platform</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruments - Music Learning Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgba(150,200,150,0.2);
+        }
+        .container h1{
+    color:  rgb(89, 43, 215);
+}
+
+        header {
+            background: rgba(199, 52, 150, 0.4);
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background: #555;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #777;
+        }
+
+        .instrument-list {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .instrument-list h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .instrument-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .instrument-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .instrument-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .instrument-image {
+            width: 100%;
+            height: 250px;
+        }
+
+        .instrument-item h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #ff6600;
+        }
+
+        .instrument-item p {
+            margin: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .instrument-item .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+        
+        .instrument-item button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .add-to-cart {
+            background: #28a745;
+            color: white;
+        }
+
+        .add-to-cart:hover {
+            background: #218838;
+        }
+
+        .view-details {
+            background: #007bff;
+            color: white;
+        }
+
+        .view-details:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            background: rgba(199, 52, 150, 0.4);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Music Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="instrument.html">Instruments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="registration.php">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="instrument-list">
+            <h2>Our Instruments</h2>
+            <div class="instrument-gallery">
+                <div class="instrument-item">
+                    <img src="image1.jpeg" alt="Guitar" class="instrument-image">
+                    <h3>Guitar</h3>
+                    <p><strong>Type:</strong> String Instrument</p>
+                    <p><strong>Cost:</strong> $200 - $2000</p>
+                    <p><strong>Duration:</strong> 6 months - 1 year</p>
+                    <p>Learn guitar for all genres.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="piono.jpeg" alt="Piano" class="instrument-image">
+                    <h3>Piano</h3>
+                    <p><strong>Type:</strong> Keyboard Instrument</p>
+                    <p><strong>Cost:</strong> $300 - $5000</p>
+                    <p><strong>Duration:</strong> 1 year - 3 years</p>
+                    <p>Master piano techniques from basics to advanced.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="image4.jpeg" alt="Drums" class="instrument-image">
+                    <h3>Drums</h3>
+                    <p><strong>Type:</strong> Percussion Instrument</p>
+                    <p><strong>Cost:</strong> $150 - $3000</p>
+                    <p><strong>Duration:</strong> 6 months - 2 years</p>
+                    <p>Learn rhythm and drumming techniques.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="violin.jpeg" alt="Violin" class="instrument-image">
+                    <h3>Violin</h3>
+                    <p><strong>Type:</strong> String Instrument</p>
+                    <p><strong>Cost:</strong> $100 - $3000</p>
+                    <p><strong>Duration:</strong> 1 year - 3 years</p>
+                    <p>Comprehensive violin courses from beginner to advanced.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="flute.jpeg" alt="Flute" class="instrument-image">
+                    <h3>Flute</h3>
+                    <p><strong>Type:</strong> Wind Instrument</p>
+                    <p><strong>Cost:</strong> $50 - $1000</p>
+                    <p><strong>Duration:</strong> 6 months - 2 years</p>
+                    <p>Learn to play beautiful melodies on the flute.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="sexa.jpeg" alt="Saxophone" class="instrument-image">
+                    <h3>Saxophone</h3>
+                    <p><strong>Type:</strong> Wind Instrument</p>
+                    <p><strong>Cost:</strong> $400 - $3000</p>
+                    <p><strong>Duration:</strong> 1 year - 2 years</p>
+                    <p>Perfect for jazz and classical pieces.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="trumpet.jpeg" alt="Trumpet" class="instrument-image">
+                    <h3>Trumpet</h3>
+                    <p><strong>Type:</strong> Brass Instrument</p>
+                    <p><strong>Cost:</strong> $150 - $2500</p>
+                    <p><strong>Duration:</strong> 1 year - 2 years</p>
+                    <p>Master the trumpet with guided lessons.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="harmonica.jpeg" alt="Harmonica" class="instrument-image">
+                    <h3>Harmonica</h3>
+                    <p><strong>Type:</strong> Wind Instrument</p>
+                    <p><strong>Cost:</strong> $20 - $200</p>
+                    <p><strong>Duration:</strong> 3 months - 1 year</p>
+                    <p>Learn to play blues and folk music on the harmonica.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="cello.jpeg" alt="Cello" class="instrument-image">
+                    <h3>Cello</h3>
+                    <p><strong>Type:</strong> String Instrument</p>
+                    <p><strong>Cost:</strong> $300 - $5000</p>
+                    <p><strong>Duration:</strong> 1 year - 3 years</p>
+                    <p>Learn to play the cello for orchestras and solo pieces.</p>
+                </div>
+                <div class="instrument-item">
+                    <img src="clarinet.jpeg" alt="Clarinet" class="instrument-image">
+                    <h3>Clarinet</h3>
+                    <p><strong>Type:</strong> Wind Instrument</p>
+                    <p><strong>Cost:</strong> $100 - $1500</p>
+                    <p><strong>Duration:</strong> 6 months - 2 years</p>
+                    <p>Perfect your clarinet skills with structured lessons.</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>...</footer>
+</body>
+</html>

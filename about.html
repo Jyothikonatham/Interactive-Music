@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Music Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head><style>
+
+
+footer {
+    background: rgba(199, 52, 150, 0.4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+</style>
+}
+<body style="background-color:rgba(150,200,150,0.2)">
+    <header>
+        <div class="container">
+            <h1>Music Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="instrument.html">Instruments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="registration.php">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Our platform offers a variety of courses to help you learn musical instruments at your own pace. We provide video tutorials, interactive lessons, and expert guidance to help you master the art of music.</p>
+        </section>
+
+        <!-- Instrument Selection Form -->
+        <section class="instrument-selection">
+            <h2>Which instrument would you like to choose?</h2>
+            <form id="instrumentForm">
+                <select id="instrumentChoice" name="instrument" required>
+                    <option value="" disabled selected>Select an instrument</option>
+                    <option value="guitar">Guitar</option>
+                    <option value="piano">Piano</option>
+                    <option value="drums">Drums</option>
+                    <option value="violin">Violin</option>
+                    <option value="flute">Flute</option>
+                </select>
+                <button type="submit">View Details</button>
+            </form>
+        </section>
+
+        <!-- Instrument Details (Hidden by default) -->
+        <section class="instruments" id="instrumentDetails" style="display: none;">
+            <h2>Instrument Details</h2>
+            <div id="instrumentInfo"></div>
+        </section>
+        <a href="registration.php">Register</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Music Learning Platform</p>
+    </footer>
+
+    <script>
+        document.getElementById('instrumentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const instrumentChoice = document.getElementById('instrumentChoice').value;
+            const instrumentDetails = document.getElementById('instrumentDetails');
+            const instrumentInfo = document.getElementById('instrumentInfo');
+
+            let details = '';
+            let imageUrl = '';
+
+            // Define details and images for each instrument
+            switch (instrumentChoice) {
+                case 'guitar':
+                    details = '<p>The guitar is a fretted musical instrument that typically has six strings. It is a popular choice for many genres of music.</p>';
+                    imageUrl = 'ima11.jpeg'; // Update with the correct path to your image
+                    break;
+                case 'piano':
+                    details = '<p>The piano is a versatile instrument that is widely used in classical, jazz, and popular music.</p>';
+                    imageUrl = 'ima22.jpeg'; // Update with the correct path to your image
+                    break;
+                case 'drums':
+                    details = '<p>Drums are a percussion instrument that form the backbone of rhythm in many musical styles.</p>';
+                    imageUrl = 'ima33.jpeg'; // Update with the correct path to your image
+                    break;
+                case 'violin':
+                    details = '<p>The violin is a string instrument that is known for its beautiful, expressive sound.</p>';
+                    imageUrl = 'ima44.jpeg'; // Update with the correct path to your image
+                    break
+                case 'flute':
+                    details = '<p>The flute is a woodwind instrument that produces sound when a player blows air across a sharp edge.</p>';
+                    imageUrl = 'flutee.jpeg'; // Update with the correct path to your image
+                    break;
+
+                default:
+                    details = '<p>No instrument selected.</p>';
+                    break;
+            }
+
+            // Display the instrument details and image
+            instrumentInfo.innerHTML = `
+                ${details}
+                <img src="${imageUrl}" alt="${instrumentChoice}" style="max-width: 100%; height: auto;">
+            `;
+
+            // Show the instrument details section
+            instrumentDetails.style.display = 'block';
+        });
+        
+    </script>
+</body>
+</html>
